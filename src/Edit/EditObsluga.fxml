@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../resources/styl.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Edit.EditObslugaController">
+   <children>
+      <Button fx:id="zapisz" layoutX="268.0" layoutY="334.0" mnemonicParsing="false" onAction="#editData" text="Zapisz" />
+      <ComboBox fx:id="editPrac" layoutX="180.0" layoutY="77.0" prefHeight="25.0" prefWidth="240.0" />
+      <ComboBox fx:id="editWarsz" layoutX="180.0" layoutY="127.0" prefHeight="25.0" prefWidth="240.0" />
+      <ComboBox fx:id="editPojazd" layoutX="180.0" layoutY="175.0" prefHeight="25.0" prefWidth="240.0" />
+      <DatePicker fx:id="editDate" layoutX="180.0" layoutY="232.0" prefHeight="25.0" prefWidth="240.0" />
+      <TextField fx:id="editCena" layoutX="180.0" layoutY="276.0" prefHeight="25.0" prefWidth="240.0" />
+   </children>
+</AnchorPane>

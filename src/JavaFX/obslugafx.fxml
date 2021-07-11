@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorObsluga" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../resources/styl.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.obslugafxController">
+    <children>
+        <TableView fx:id="tableObsluga" layoutX="300.0" layoutY="27.0" prefHeight="550.0" prefWidth="780.0">
+            <columns>
+                <TableColumn fx:id="colId_obs" minWidth="0.0" prefWidth="0.0" text="ID Obsługi" />
+                <TableColumn fx:id="colPrac" prefWidth="204.0" text="Pracownik" />
+                <TableColumn fx:id="colWarszt" prefWidth="204.0" text="Warsztat" />
+                <TableColumn fx:id="colPojazd" prefWidth="203.0" text="Pojazd" />
+                <TableColumn fx:id="colDataObs" prefWidth="82.0" text="Data Obsługi" />
+                <TableColumn fx:id="colCenaObs" prefWidth="84.0" text="Cena Obsługi" />
+            </columns>
+        </TableView>
+        <Button layoutX="60.0" layoutY="369.0" mnemonicParsing="false" onAction="#buttonObsluga" text="Dodaj Obsługe" />
+        <Text layoutX="94.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pracownik" />
+        <Text layoutX="98.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warsztat" />
+        <Text layoutX="103.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pojazd" />
+        <Text layoutX="86.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Obsługi" />
+        <MenuButton layoutX="82.0" layoutY="424.0" mnemonicParsing="false" text="Obsługa">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuKlient" text="Klient" />
+                <MenuItem mnemonicParsing="false" onAction="#menuPracownik" text="Pracownik" />
+                <MenuItem mnemonicParsing="false" onAction="#menuPojazdy" text="Pojazd" />
+                <MenuItem mnemonicParsing="false" onAction="#menuWarsztaty" text="Warsztat" />
+            </items>
+        </MenuButton>
+      <Button layoutX="83.0" layoutY="318.0" mnemonicParsing="false" onAction="#buttonFind" text="Szukaj" />
+      <DatePicker fx:id="data_obs" layoutX="46.0" layoutY="220.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="cena_obs" layoutX="46.0" layoutY="274.0" />
+      <Text layoutX="85.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cena Obslugi" />
+      <ComboBox fx:id="cmbPrac" layoutX="46.0" layoutY="60.0" prefWidth="150.0" value="Wybierz" />
+      <ComboBox fx:id="cmbWarszt" layoutX="46.0" layoutY="116.0" prefWidth="150.0" value="Wybierz" />
+      <ComboBox fx:id="cmbPojazd" layoutX="46.0" layoutY="166.0" prefWidth="150.0" value="Wybierz" />
+      <Button fx:id="refreshbutton" layoutX="249.0" layoutY="34.0" mnemonicParsing="false" onAction="#buttonClear" text="Button" />
+      <Button fx:id="buttonDelete" layoutX="249.0" layoutY="132.0" mnemonicParsing="false" onAction="#buttonDelete" text="Usuń" />
+      <Button fx:id="buttonEdit" layoutX="249.0" layoutY="82.0" mnemonicParsing="false" onAction="#buttonEdit" text="Edytuj" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="myAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../resources/styl.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.Controller">
+    <children>
+        <TableView fx:id="tableKlient" layoutX="300.0" layoutY="27.0" prefHeight="550.0" prefWidth="780.0">
+            <columns>
+                <TableColumn fx:id="colId_kl" minWidth="0.0" prefWidth="0.0" text="ID Klienta" />
+                <TableColumn fx:id="colNazwisko" prefWidth="201.0" text="Nazwisko" />
+                <TableColumn fx:id="colImie" prefWidth="197.0" text="Imie" />
+                <TableColumn fx:id="colMiasto" prefWidth="208.0" text="Miasto" />
+                <TableColumn fx:id="colAdres" prefWidth="173.0" text="Adres" />
+            </columns>
+        </TableView>
+        <Button layoutX="64.0" layoutY="321.0" mnemonicParsing="false" onAction="#button" text="Dodaj Klienta" />
+        <TextField fx:id="nazwisko" layoutX="46.0" layoutY="60.0" />
+        <Text layoutX="94.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
+        <TextField fx:id="imie" layoutX="46.0" layoutY="116.0" />
+        <Text layoutX="109.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imię" />
+        <TextField fx:id="miasto" layoutX="46.0" layoutY="166.0" />
+        <Text layoutX="103.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miasto" />
+        <TextField fx:id="ulica" layoutX="46.0" layoutY="220.0" />
+        <Text layoutX="88.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ulica i adres" />
+      <MenuButton fx:id="btnmenu" layoutX="88.0" layoutY="376.0" mnemonicParsing="false" text="Klient">
+        <items>
+            <MenuItem fx:id="buttonObsluga" mnemonicParsing="false" onAction="#menuObsluga" text="Obsługa" />
+            <MenuItem mnemonicParsing="false" onAction="#menuPracownik" text="Pracownik" />
+            <MenuItem mnemonicParsing="false" onAction="#menuWarsztaty" text="Warsztaty" />
+            <MenuItem mnemonicParsing="false" onAction="#menuPojazdy" text="Pojazdy" />
+        </items>
+      </MenuButton>
+      <Button layoutX="83.0" layoutY="267.0" mnemonicParsing="false" onAction="#buttonFind" text="Szukaj" />
+      <Button fx:id="refreshbutton" layoutX="260.0" layoutY="30.0" mnemonicParsing="false" onAction="#buttonClear" />
+      <Button fx:id="buttonDelete" layoutX="252.0" layoutY="140.0" mnemonicParsing="false" onAction="#buttonDelete" text="Usuń" />
+      <Button fx:id="buttonEdit" layoutX="252.0" layoutY="90.0" mnemonicParsing="false" onAction="#buttonEdit" text="Edytuj" />
+    </children>
+</AnchorPane>

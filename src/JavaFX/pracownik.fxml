@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPracownik" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../resources/styl.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.pracownikController">
+    <children>
+        <TableView fx:id="tablePracownik" layoutX="300.0" layoutY="27.0" prefHeight="550.0" prefWidth="780.0">
+            <columns>
+                <TableColumn fx:id="colID_prac" minWidth="0.0" prefWidth="0.0" text="ID Pracownika" />
+                <TableColumn fx:id="colNazwisko" prefWidth="257.0" text="Nazwisko" />
+                <TableColumn fx:id="colImie" prefWidth="176.0" text="Imie" />
+                <TableColumn fx:id="colDataZat" prefWidth="154.0" text="Data Zatrudnienia" />
+                <TableColumn fx:id="colWynag" prefWidth="192.0" text="Wynagrodzenie" />
+            </columns>
+        </TableView>
+        <Button layoutX="53.0" layoutY="310.0" mnemonicParsing="false" onAction="#buttonPracownik" text="Dodaj Pracownika" />
+        <TextField fx:id="nazwisko_prac" layoutX="46.0" layoutY="60.0" />
+        <Text layoutX="95.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
+        <TextField fx:id="imie_prac" layoutX="46.0" layoutY="116.0" />
+        <Text layoutX="109.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imię" />
+        <Text layoutX="73.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Zatrudnienia" />
+        <TextField fx:id="wynagr" layoutX="46.0" layoutY="220.0" />
+        <Text layoutX="79.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wynagrodzenie" />
+        <MenuButton layoutX="79.0" layoutY="364.0" mnemonicParsing="false" text="Pracownik">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuObsluga" text="Obsługa" />
+                <MenuItem mnemonicParsing="false" onAction="#menuKlient" text="Klient" />
+                <MenuItem mnemonicParsing="false" onAction="#menuPojazdy" text="Pojazdy" />
+                <MenuItem mnemonicParsing="false" onAction="#menuWarsztaty" text="Warsztaty" />
+            </items>
+        </MenuButton>
+      <DatePicker fx:id="data_zatru" layoutX="46.0" layoutY="166.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="83.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonFind" text="Szukaj" />
+      <Button fx:id="refreshbutton" layoutX="249.0" layoutY="43.0" mnemonicParsing="false" onAction="#buttonClear" text="Button" />
+      <Button fx:id="buttonDelete" layoutX="249.0" layoutY="140.0" mnemonicParsing="false" onAction="#buttonDelete" text="Usuń" />
+      <Button fx:id="buttonEdit" layoutX="249.0" layoutY="90.0" mnemonicParsing="false" onAction="#buttonEdit" text="Edytuj" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../resources/styl.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Edit.EditPojazdyController">
+   <children>
+      <Button fx:id="zapisz" layoutX="268.0" layoutY="334.0" mnemonicParsing="false" onAction="#editData" text="Zapisz" />
+      <ComboBox fx:id="editKlient" layoutX="225.0" layoutY="87.0" prefWidth="150.0" />
+      <TextField fx:id="model" layoutX="226.0" layoutY="138.0" />
+      <TextField fx:id="marka" layoutX="226.0" layoutY="194.0" />
+      <TextField fx:id="rocznik" layoutX="226.0" layoutY="246.0" />
+   </children>
+</AnchorPane>
